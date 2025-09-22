@@ -4,7 +4,6 @@ Ejercicio2:
     que le pase como parametro un valor 
     y que verifique si es un numero o no.
 */
-
 console.log("Primera Funcion:");
 
 const num1=5;
@@ -19,7 +18,7 @@ console.log("Validar valor:", validarNumero(num1));
 /*
 2ª Func: Crear una func llamada Mayusculas que le pase como parametro 
 un valor que debo de verificar que sea un texto
-y automaticamente me ponga la 1a letra en mayus.
+y automaticamente me ponga las letra en mayus.
 */
 console.log("Segunda Funcion -->");
 
@@ -38,8 +37,18 @@ function mayusculas(texto1){
 y me diga si son numero y cual es mayor. 
 Usar alguna de las dos funciones anteriores.
 */
+const num2=10;
+const num3=7;
 
+console.log("Tercera Funcion -->"); 
 function compararNumeros(){
-
+    if (!validarNumero(num2) || !validarNumero(num3)){
+        console.log("Uno de esos no es un numero.-->")
+        return false;
+    }
+    if(num2>num3){
+        console.log("El numero mayor es:", num2);
+    } else{
+        console.log("El numero mayor es:", num3);
+    }
 }
-

@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ejerccio1": "node src/ejercicio1.js",
-    "ejercicio2": "node src/ejercicio2.js"
+    "ejercicio2": "node src/ejercicio2.js",
+    "ejercicio3": "node src/ejercicio3.js"
   }
 }
