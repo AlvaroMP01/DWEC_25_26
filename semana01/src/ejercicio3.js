@@ -63,10 +63,23 @@ const consultarSaldo =() =>{
 //Crerar cuenta bancaria
 console.log(crearCuenta(1000));
 
-//Ingresar dinero a la cuenta
-
 //Ver saldo actual
 
 consultarSaldo();
 
 //Sacar dinero de la cuenta
+sacarDinero(500);
+sacarDinero(2000);
+sacarDinero(-200);
+sacarDinero("hola");
+
+consultarSaldo();
+
+//Ingresar dinero a la cuenta
+
+ingresarDinero(500);
+ingresarDinero(-200);
+ingresarDinero("hola");
+
+//Ver saldo actual
+consultarSaldo();
