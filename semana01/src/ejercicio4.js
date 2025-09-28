@@ -46,5 +46,20 @@ function nombresMayusuculas(arrayNombres){
 
 //! 2º Crear una funcion que le pase como parametro un array de numeros y me devuelva un array con las raices cuadradas de esos numeros.
 
+function raicesCuadradas(arrayNumeros) {
+    return arrayNumeros.map((num) => Math.sqrt(num));
+}
 
 //! 3º Crear una funcion que le pase como parametro un array de numeros y me devuelva un array con los numeros primos.
+
+function esPrimo(num) {
+    if (num < 2) return false; // Los menores de 2 no son primos
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false; // Si se puede dividir, no es primo
+    }
+    return true;
+}
+
+function numerosPrimos(arrayNumeros) {
+    return arrayNumeros.filter((num) => esPrimo(num));
+}
