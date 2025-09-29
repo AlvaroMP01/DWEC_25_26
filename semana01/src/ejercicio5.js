@@ -35,10 +35,36 @@ const cuadradoAF = (array=[]) => array.map((element) => element * element);
 console.log(`El cuadrado del array usando Arrow Function es: ${numeros} = ${cuadradoAF(numeros)}`);
 console.log(`El cuadrado del array es: ${numeros} = ${cuadrado(numeros)}`);
 
-//? 1º Crear tres funciones que les pases un array de numeros y me diga tres cosas: el maximo, el minimo y un array con los numeros que son primos
-const numeros = [10,20,15,12,21,68]
-
-function maximo(array = []) {
-    return Math.max(...array);
+//? 1º Crear tres funciones que les pases un array de numeros y me diga tres cosas: el maximo, el minimo y un array con los numeros que son pares
+/*
+const par = (arrayNumeros=[]) => {
+    const pares = [];
+    arrayNumeros.map((numero)=> {
+        if (numero >= 1) {
+            if (numero%2 === 0) pares.push(numero);
+        }
+    })
+    return pares;
 }
+*/
+const pares = (arrayNumeros=[]) => arrayNumeros.filter(numero => numero%2 === 0);
+Math.max(arrayNumeros);
+Math.min(arrayNumeros);
+
+//? 2º Un array de nombres y devolver los nombres con más de 5 caracteres
+
+const nombresLongitud2 = (arrayNombres=[], longitud) => arrayNombres
+    .filter(nombre => nombre.length >= longitud);
+
+//? 3º Un array de nombres y devolver los nombres con la primera letra en mayúscula
+
+const letraCapital = (arrayNombres=[]) => arrayNombres
+.filter(nombre => nombre.charAt(0) === nombre.charAt(0).toUpperCase());
+
+//? 3.2º Un array de nombres y devolver los nombres con la primera letra en mayúscula
+
+const letraCapitalAF = (arrayNombres = []) => arrayNombres
+.map((nombre) => nombre.charAt[0].toUpperCase() + nombre.slice(1).toLowercase());
+
+//? 4º Dado un objeto formado por {nombre: password: } verificar 1º que el nombre y la contraseña no sean vacios, 2º que la longitud de la contraseñas sea de mas de 8 caracteres, 3º que los datos sean el usuario root y la contraseña sea Alumnado2025
 
