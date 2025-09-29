@@ -1,5 +1,5 @@
-// Formas de crear un array
 
+// Formas de crear un array
 const frutas = ["Manzana", "Platano", "Cereza"];
 const dato = [];
 const nombre = new Array();
