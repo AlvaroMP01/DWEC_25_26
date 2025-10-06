@@ -1,0 +1,15 @@
+{
+  "name": "semana01",
+  "version": "1.0.0",
+  "description": "Bases del uso de JS",
+  "license": "ISC",
+  "author": "Alvaro MP",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ejerccio1": "node src/ejercicio1.js",
+    "ejercicio2": "node src/ejercicio2.js",
+    "ejercicio5": "node src/ejercicio5.js"
+  }
+}
