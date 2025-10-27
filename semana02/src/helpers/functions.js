@@ -7,3 +7,13 @@
  */
 export const totalVentas = ((ventas = {}) => Object.values(ventas)
         .reduce((suma, venta) => suma + venta, 0));
+
+export const extraerInfoEstudiantes = (estudiantes= []) => {
+        return estudiantes.map(({nombre, direccion:{ciudad}})=>{
+                return {
+                        nombre,
+                        ciudad,
+                };
+        });
+    //debe devolver el texto Nombre: Nombre_del_Estudiante, Ciudad: Ciudad_del_Estudiante
+}
