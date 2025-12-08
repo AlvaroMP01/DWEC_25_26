@@ -1,12 +1,30 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+import './style.css';
+import viteLogo from '/vite.svg';
+//-----------------Funciones-----------------
+function handleClickQuerySelectorSpecial(){
+  alert("Has pulsado el botón de especial");
+  const elementoEspecial=document.querySelector(".especial");
+  elementoEspecial.classList.add("text-red-500");
+};
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <h1 class="text-amber-300 text-6xl> DOM - Manipulacion del DOM con JavaScript </h1>
-  </div>
-`
+function handleClickQuerySelectorComun(){
+  alert("Has pulsado el boton de comun");
+  const elementoComun=document.querySelector(".comun");
+  elementoComun.classList.add("text-green-700");
+}
 
-setupCounter(document.querySelector('#counter'))
+
+//---------Inicio de la aplicacion-----------
+const btnEspecial=document.getElementById("btn-especial");
+btnEspecial.addEventListener("click", handleClickQuerySelectorSpecial);
+
+const btnComun=document.getElementById("btn-comun");
+btnComun.addEventListener("click", handleClickQuerySelectorComun);
+
+
+
+
+
+
+
+const app = document.getElementById("app");

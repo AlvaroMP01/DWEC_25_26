@@ -1,0 +1,63 @@
+import './style.css';
+import viteLogo from '/vite.svg';
+const app = document.getElementById("app");
+app.innerHTML = `
+  <div>
+    <h1 class="text-amber-300 text-6xl"> 
+    DOM - Manipulacion del DOM con JavaScript </h1>
+      <ul>
+      <li Class="item">alumnado 1</li>
+      <li Class="item">alumnado 2</li>
+      <li Class="item">alumnado 3</li>
+      </ul>
+  </div>
+  <ul>
+      <li Class="item">dato 1</li>
+      <li Class="item">dato 2</li>
+      <li Class="item">dato 3</li>
+  </ul>
+  <p class="importante">
+    Ejemplos de JavaScript importante
+  </p>
+  <p class="no-importante">
+    Ejemplos de JavaScript no importante
+  </p>
+  <p class="importante">
+    Ejemplos de JavaScript importante 2
+  </p>
+`;
+
+//Crear clases dinamicas
+app.classList.add("OK");
+app.classList.add("Destacado");
+
+app.classList.add("Remove");
+
+//Modificar elementos dinámicamente
+const items = document.getElementsByClassName("item");
+console.log(`items es del tipo ${typeof items}`);
+console.log(items);
+
+for(const item of items){
+  item.textContent="Hola Mundo";
+}
+
+const listaItems=document.getElementsByTagName("li");
+for(const item of listaItems){
+  item.textContent="new Text";
+}
+
+
+const parrafoImportante=document.querySelector(".importante");
+parrafoImportante.textContent= "Este párrafo es mega IMPORTANTE";
+
+const parrafoImportanteTodos = document.querySelectorAll(".importante");
+parrafoImportanteTodos.forEach((elemento, indice)=>{
+  elemento.textContent=`Elemento ${indice + 1}`;
+})
+
+//! Poner a los parrafos con la clase importante añadir la clase rojo y los que no la clase verde
+const parrafoNoImportante = document.querySelectorAll(".no-importante");
+for(const importante of parrafoImportanteTodos){
+  importante.classList.add("text-2xl","text-red-500");
+}

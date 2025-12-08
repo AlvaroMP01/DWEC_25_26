@@ -7,7 +7,43 @@
     <script type="module" src="/src/main.js" defer></script>
     <title>semana04-dom</title>
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="bg-gray-200 p-8">
+    <div id="app" calss="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold text-blue-600 mg-6">
+        Selector de elementos del DOM
+      </h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="bg-white p-6 rounded-lg shadow-2xl">
+          <h2 class="text-xl font-semibold mb4">Elementos de prueba</h2>
+          <div id="testElements">
+          <div id="unico" class="p-3 bg-blue-200 rounded mb-2">Elemento con ID único</div>
+          <div class="p-3 bg-green-200 rounded mb-2 comun">Elemento con clase común 1</div>
+          <div class="p-3 bg-green-200 rounded mb-2 comun">Elemento con clase común 2</div>
+          <p class="p-3 bg-yellow-200 rounded mb-2 especial">Párrafo Especial</p>
+        </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-2xl">
+          <h2 class="text-xl font-semibold mb-4">
+            Panel de Control
+          </h2>
+          <div class="space-y-3">
+            <button class="w-full bg-blue-500 hover:bg-blue-900 text-white font-bold py-2 px-4 rounded transition-colors">
+              getElementById('unico')
+            </button>
+            <button id="btn-comun" class="w-full bg-green-500 hover:bg-green-900 text-white font-bold py-2 px-4 rounded transition-colors" onclick="handleClickQuerySelectorComun()">
+              getElementByClassName('comun')
+            </button>
+            <button id="btn-div" class="w-full bg-purple-500 hover:bg-purple-900 text-white font-bold py-2 px-4 rounded transition-colors"
+            onclick="handleClickQuerySelectorDiv()"> 
+              getElementByTagName('div')
+            </button>
+            <button id="btn-especial" class="w-full bg-yellow-500 hover:bg-yellow-900 text-white font-bold py-2 px-4 rounded transition-colors" 
+            onclick="handleClickQuerySelectorSpecial()">
+              querySelector('.special')
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

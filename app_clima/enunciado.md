@@ -1,0 +1,3 @@
+## Crear una aplicacion utilizando promesas que permita realizar busquedas de ciudades del mundo y  me muestre la temperatura, humedad, velocidad del viento etc. Tambien indicar si es nublado, soleado, lluvioso, etc. Se pide crear componentes que separen la logica de programacion.
+
+- https://api.openweathermap.org/data/2.5/weather?q=Granada&units=metric&lang=es&appid=56e0f10ebae7bcd71c43aad7d0a89fcd
